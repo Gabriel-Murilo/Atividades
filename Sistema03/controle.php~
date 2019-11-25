@@ -1,0 +1,14 @@
+<?php
+  include("../model/Pessoa.php");
+  $Relatorio = new Relatorio01();
+  $Descricao = $_POST["Descrição"];
+  $ValorRenda =$_POST["ValorRenda"];
+  $ValorDespesa = $_POST["ValorDespesa"];]
+  $Data = $_POST["Data"];
+  $inserir = $pessoa1->cadastrar($Descricao, $ValorRenda, $ValorDespesa, $Data);
+  if ($inserir==1){
+    header('location: ../view/formulario.php?mensagem=sucesso');
+  }else{
+    header('location: ../view/formulario.php?mensagem=erro');
+  }
+?>

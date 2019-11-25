@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <?php
+    if(isset($_GET["mensagem"]) & !empty($_GET["mensagem"])){
+      if($_GET["mensagem"]=="sucesso"){
+        echo "Dados Enviados com sucesso!!!";
+      }elseif ($_GET["mensagem"]=="erro") {
+        echo "Erro ao Enviar os dados!!!";
+      }
+    }
+  ?>
+    <form action="../controler/controle.php" method="post">
+      <label>Descrição: </label>
+      <input type="Descrição" name="Descrição" value="">
+      <label>Valor Renda:</label>
+      <input type="Valor Renda" name="Valor Renda" value="">
+      <label>Valor Despesa:</label>
+      <input type="Valor despesa" name="Valor Despesa" value="">
+      <label>Data: </label>
+      <input type="Date" name="Data" value="date">
+      <input type="submit" name="" value="Enviar">
+    </form>
+  </body>
+</html>
